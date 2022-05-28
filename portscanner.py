@@ -1,4 +1,5 @@
-import socket #shebang line
+#!/usr/bin/env python #shebang line
+import socket 
 import subprocess
 import sys
 from datetime import datetime
@@ -33,3 +34,7 @@ except socket.gaierror:
 except socket.error:
     print("Couldn't connect to server")
     sys.exit()
+
+timeAfterScan = datetime.now()
+total = timeAfterScan - timeBeforeScan
+print(f"Scanning completed in: {total}")
